@@ -6,6 +6,12 @@ workspace "CHANGEME"
     filter "platforms:x64"
       architecture "x86_64"
     filter {}
+	
+	filter "system:Windows"
+	  defines { "WINDOWS_BUILD" }
+	filter "system:Unix"
+	  defines { "LINUX_BUILD" }
+	filter {}
    
     filter "configurations:Debug"
       defines { "DEBUG" }
